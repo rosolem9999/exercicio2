@@ -1,0 +1,28 @@
+package exercicios;
+
+import java.util.Scanner;
+
+public class exercicios2 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite o nome da pessoa: ");
+        String nome = scanner.nextLine();
+
+        System.out.print("Digite o sexo da pessoa (M/F): ");
+        char sexo = scanner.nextLine().toUpperCase().charAt(0);
+
+        System.out.print("Digite o estado civil da pessoa (SOLTEIRA/CASADA): ");
+        String estadoCivil = scanner.nextLine().toUpperCase();
+
+        if (sexo == 'F' && estadoCivil.equals("CASADA")) {
+            System.out.print("Digite o tempo de casada (anos): ");
+            int tempoCasada = scanner.nextInt();
+            System.out.println(nome + " é casada há " + tempoCasada + " anos.");
+        } else {
+            System.out.println(nome + " não atende aos critérios de tempo de casada.");
+        }
+
+        scanner.close();
+    }
+}
